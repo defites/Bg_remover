@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Background Remover</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- Loading Overlay -->
+<div id="loader">
+    <div class="spinner"></div>
+    <p>Removing background...</p>
+</div>
+
+<div class="container">
+    <h1>AI Background Remover</h1>
+    <p>Upload an image and get a transparent background</p>
+
+    <form id="uploadForm">
+
+    <label class="upload-box" id="uploadBox">
+        <input type="file" id="imageInput" accept="image/*" hidden required>
+        <div class="upload-content">
+            <span class="icon">⬆</span>
+            <p><strong>Drag & Drop</strong> image here</p>
+            <p class="small">or click to browse</p>
+        </div>
+        <img id="previewImage">
+    </label>
+
+    <button type="submit">Remove Background</button>
+</form>
+
+    <div id="result">
+        <img id="outputImage">
+        <a id="downloadBtn" download="no-bg.png">Download Image</a>
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
