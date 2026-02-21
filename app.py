@@ -31,6 +31,4 @@ def remove_bg():
     return send_file(output_path, mimetype="image/png")
 
 if __name__ == "__main__":
-    os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-    os.makedirs(OUTPUT_FOLDER, exist_ok=True)
-    app.run(debug=True)
+ app.run()
